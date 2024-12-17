@@ -32,9 +32,9 @@ class RegOutputsLabels:
         x, y, z = nii_img_tensor.shape
         return torch.reshape(nii_img_tensor, (1, 1, x, y, z))
 
-    def compute_scaled_tensors(self, n=10):
+    def compute_reg_tensors(self, n=10):
         """
-        Computes scaled tensors for outputs and labels based on random multipliers.
+        Computes regularized tensors for outputs and labels based on random multipliers.
 
         Args:
             n (int): The maximum value for random multipliers (default is 10).
